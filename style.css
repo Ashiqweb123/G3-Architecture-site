@@ -61,7 +61,7 @@ nav li a {
     color: #131313;
 }
 
-.banner-des {
+.banner-des,.fact-des {
     font-weight: 400;
     color: #727272;
 }
@@ -70,55 +70,18 @@ nav li a {
    width: 100%;
 }
 
-/* responsive media query */
 
-@media screen and (max-width:576px) {
-    header
-    {
-        padding: 20px;
-    }
-    
-    nav
-    {
-        flex-direction: column;
-    }
-    nav>ul
-    {
-        flex-direction: column;
-    }
-    nav li
-    {
-        margin: 5px 0;
-    }
-}
-@media screen and (min-width:576px) and (max-width:990px) {
-    header
-    {
-        padding: 50px;
-    }
-    
-    nav
-    {
-        flex-direction: column;
-    }
-    nav>ul
-    {
-        flex-direction: column;
-    }
-
-    
-}
 
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 .team-container
 {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+   
 }
 .team-content-img
 {
@@ -149,4 +112,65 @@ main{
 {
     color: #FF900E;
     font-weight: 700;
+}
+
+
+/* responsive media query */
+
+@media screen and (max-width:576px) {
+    header
+    {
+        padding: 20px;
+    }
+    
+    nav,.team-container
+    {
+        flex-direction: column;
+    }
+    nav>ul
+    {
+        flex-direction: column;
+    }
+    nav li
+    {
+        margin: 5px 0;
+    }
+
+    .team-content-img
+    {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .team-container
+    {
+        width: auto;
+        border: 2px solid red;
+    }
+    .team-content
+    {
+        padding-left: 2px;
+        padding-right: 8px;
+    }
+    main{
+        max-width: auto;
+        margin: 30px auto;
+    }
+ 
+}
+@media screen and (min-width:576px) and (max-width:990px) {
+    header
+    {
+        padding: 50px;
+    }
+    
+    nav, .team-container
+    {
+        flex-direction: column;
+    }
+    nav>ul
+    {
+        flex-direction: column;
+    }
+
+    
 }
